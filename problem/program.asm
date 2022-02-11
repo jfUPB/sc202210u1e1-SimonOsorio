@@ -7,22 +7,6 @@
     @0
     M=D
 
-(FILLSCREEN)
-    @1
-    D=M
-    @0
-    A=M
-    M=D
-    @0
-    D=M+1
-    @KBD
-    D=A-D
-    @0
-    M=M+1
-    A=M
-    @FILLSCREEN
-    D;JGT
-
 (KEYCHECK)
 //Tecla F = 70, Tecla C = 67
     @KBD
@@ -41,6 +25,23 @@
 
     @KEYCHECK
     0;JMP
+
+(FILLSCREEN)
+    @1
+    D=M
+    @0
+    A=M
+    M=D
+    @0
+    D=M+1
+    @KBD
+    D=A-D
+    @0
+    M=M+1
+    A=M
+    
+    @FILLSCREEN
+    D;JGT
 
 (FILLCOLOR)
     @1
