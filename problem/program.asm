@@ -5,13 +5,26 @@
     @SCREEN
     D=A
     @0
-    
-
+    M=D
 
 (KEYCHECK)
 //Tecla F = 70, Tecla C = 67
+    @KBD
     D=M
-    @
+    @70
+    D=A-D
+    @FILLCOLOR
+    D;JEQ
+
+    @KBD
+    D=M
+    @67
+    D=A-D
+    @CLEARCOLOR
+    D;JEQ
+
+    @KEYCHECK
+    0;JMP
 
 (FILLCOLOR)
     @1
@@ -23,6 +36,7 @@
     @1
     M=0 //White
     @FILLSCREEN
+    0;JMP
 
 (FILLSCREEN)
     @1
