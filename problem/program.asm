@@ -26,6 +26,18 @@
     @KEYCHECK
     0;JMP
 
+(FILLCOLOR)
+    @1
+    M=-1 //Black code
+    @FILLSCREEN
+    0;JMP
+
+(CLEARCOLOR)
+    @1
+    M=0 //White code
+    @FILLSCREEN
+    0;JMP
+
 (FILLSCREEN)
     @1
     D=M
@@ -42,18 +54,6 @@
     
     @FILLSCREEN
     D;JGT
-
-(FILLCOLOR)
-    @1
-    M=-1 //Black code
-    @FILLSCREEN
-    0;JMP
-
-(CLEARCOLOR)
-    @1
-    M=0 //White code
-    @FILLSCREEN
-    0;JMP
-
+    
 @SETSCREEN
 0;JMP
