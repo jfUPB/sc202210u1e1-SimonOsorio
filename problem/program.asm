@@ -1,7 +1,7 @@
 // SIMON OSORIO URIBE
 // 000420659
 // SIMON.OSORIOU@UPB.EDU.CO
-(SETSCREEN)
+(RESET)
     @SCREEN
     D=A
     @0
@@ -28,13 +28,13 @@
 
 (FILLCOLOR)
     @1
-    M=-1 //Black code
+    M=-1 //Black
     @FILLSCREEN
     0;JMP
 
 (CLEARCOLOR)
     @1
-    M=0 //White code
+    M=0 //White
     @FILLSCREEN
     0;JMP
 
@@ -51,9 +51,8 @@
     @0
     M=M+1
     A=M
-    
     @FILLSCREEN
     D;JGT
-    
-@SETSCREEN
+
+@RESET
 0;JMP
